@@ -15,6 +15,7 @@ void main() async {
   FirebaseMessaging.instance.onTokenRefresh.listen((event) {});
   FirebaseMessaging.onBackgroundMessage(firebaseMessagingBackgroundHandler);
   /////
+
   FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
       FlutterLocalNotificationsPlugin();
   flutterLocalNotificationsPlugin
@@ -28,8 +29,6 @@ void main() async {
 Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   print("thuc: ${message.notification?.title}");
 }
-
-void mockFunc() {}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
