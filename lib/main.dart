@@ -29,6 +29,8 @@ Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   print("thuc: ${message.notification?.title}");
 }
 
+void mockFunc() {}
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
